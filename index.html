@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      display: flex;
+      padding: 25px;
+      color: rgb(25, 56, 67);
+      box-sizing: border-box;
+      justify-content: center;
+      background: radial-gradient(rgb(183, 197, 202),grey,rgb(58, 103, 102),rgb(142, 167, 189));
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #calculator {
+      display: grid;
+      box-shadow: -4px 4px 2px #054253;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 8px;
+      max-width: 300px;
+      margin: auto;
+      background-color: #006480;
+      padding-top: 3vw;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      padding-bottom: 2vw;
+      border: 2px solid rgb(8, 21, 32);
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;  
+      text-align: center;
+      cursor: pointer;
+      background-color: #7eabc0;
+      border: 1px solid rgb(56, 56, 117);
+      border-radius: 2px;
+      color: rgb(57, 3, 3);
+    }
+    button:hover{
+        background-color: #3c85a7;
+    }   
+    .operator,#clearButton{
+        background: #3d5e6d;
+        color: white;
+    }
+
+
+    #display {
+      color: white; 
+      grid-column: span 4;
+      padding: 10px;    
+      text-align: right;
+      background-color: #7eabc0;
+    }   
+    @media screen and (max-width: 1000px) and (min-width: 400px){
+        h1{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 400px) and (min-width: 100px){
+        h1{
+            font-size: 10px;
+        }
+        body{
+            flex-direction: column;
+        }
+    }
+  </style>
+</head>
+<body>
+<h1>CALCULATOR | MUHAMMAD WASIF SHAKEEL</h1>
+<div id="calculator">
+  <div id="display"></div>
+  <button id="clearButton">C</button>
+  <button class="operator" data-value="/">/</button>
+  <button class="operator" data-value="*">*</button>
+  <button class="operator" data-value="-">-</button>
+  <button class="number" data-value="7">7</button>
+  <button class="number" data-value="8">8</button>
+  <button class="number" data-value="9">9</button>
+  <button class="operator" data-value="+">+</button>
+  <button class="number" data-value="4">4</button>
+  <button class="number" data-value="5">5</button>
+  <button class="number" data-value="6">6</button>
+  <button class="number" data-value=".">.</button>
+  <button class="number" data-value="1">1</button>
+  <button class="number" data-value="2">2</button>
+  <button class="number" data-value="3">3</button>
+  <button class="number" data-value="0">0</button>
+  <button id="equalsButton" data-value="=">=</button>
+</div>
+
+<script>
+  let display = document.getElementById('display');
+  let clearButton = document.getElementById('clearButton');
+  let equalsButton = document.getElementById('equalsButton');
+  let numberButtons = document.querySelectorAll('.number');
+  let operatorButtons = document.querySelectorAll('.operator');
+
+  clearButton.addEventListener('click', clearDisplay);
+  equalsButton.addEventListener('click', calculateResult);
+
+  numberButtons.forEach(button => {
+    button.addEventListener('click', () => appendToDisplay(button.dataset.value));
+  });
+
+  operatorButtons.forEach(button => {
+    button.addEventListener('click', () => appendToDisplay(button.dataset.value));
+  });
+
+  function appendToDisplay(value) {
+    display.innerText += value;
+  }
+
+  function clearDisplay() {
+    display.innerText = '';
+  }
+
+  function calculateResult() {
+    let expression = display.innerText;
+
+    // Check for division by zero
+    if (expression.includes('/0')) {
+      display.innerText = 'Error';
+      return;
+    }
+
+    try {
+      let result = eval(expression);
+      display.innerText = result;
+    } catch (error) {
+      display.innerText = 'Error';
+    }
+  }
+</script>
+
+</body>
+</html>
