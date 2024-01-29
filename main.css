@@ -124,14 +124,17 @@ h1{
     display: flex;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-#skillrow{
+.skillrow{
     display: flex;
     margin: auto;
     font-size: 20px;
     width: 100%;
-    justify-content: space-between;   
+    justify-content: space-around;   
+}
+.skill{
+    margin: 1rem;
 }
 @keyframes fillAnimation {
     to {
@@ -542,7 +545,7 @@ h1{
         height:300px;
     }
 
-    #skillrow{
+    .skillrow{
         font-size: 10px;
     }
     .skillbar1 {
