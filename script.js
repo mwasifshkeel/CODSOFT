@@ -1,41 +1,53 @@
-
+document.addEventListener('DOMContentLoaded', function () {
+  const itemsOnDisplay = 4;
+  let currentIndex = 0;
   const scrollerContent = document.getElementById('scrollerContent');
-  const scrollerContainer = document.getElementById('scrollerContainer');
+  const scrollerItemWidth = document.querySelector('.scroller-item').offsetWidth;
+  const itemCount = document.querySelectorAll('.scroller-item').length;
 
-  function duplicateContent() {
-    const clone = scrollerContent.cloneNode(true);
-    scrollerContainer.appendChild(clone);
+  function moveLeft() {
+      currentIndex = (currentIndex - itemsOnDisplay + itemCount) % itemCount;
+      updateTransform();
   }
 
-  // Duplicate the initial content
-  duplicateContent();
+  function moveRight() {
+      currentIndex = (currentIndex + itemsOnDisplay) % itemCount;
+      updateTransform();
+  }
 
-  // Set up a delay to allow the initial content to move off-screen
-  setTimeout(() => {
-    scrollerContent.style.transition = 'transform 10s linear';
-    scrollerContent.style.transform = `translateX(-${scrollerContent.offsetWidth}px)`;
+  function updateTransform() {
+      const startIndex = currentIndex;
+      const endIndex = (currentIndex + itemsOnDisplay - 1) % itemCount;
+      const translateValue = -startIndex * scrollerItemWidth;
+      const displayWidth = itemsOnDisplay * scrollerItemWidth;
 
-    // Remove the transition for the next duplicate to avoid animation jump
-    scrollerContent.addEventListener('transitionend', function removeTransition() {
-      scrollerContent.style.transition = 'none';
-      scrollerContent.removeEventListener('transitionend', removeTransition);
+      scrollerContent.style.transition = "transform 0.5s ease-in-out";
+      scrollerContent.style.transform = `translateX(${translateValue}px)`;
+      scrollerContent.style.width = `${displayWidth}px`;
 
-      // Duplicate the content without animation
-      duplicateContent();
-
-      // Reset to the initial position
-      scrollerContent.style.transform = 'translateX(0)';
-      
-      // Trigger reflow
-      scrollerContent.offsetHeight;
-
-      // Set up the continuous looping
+      // Reset transition after animation completes to enable continuous looping
       setTimeout(() => {
-        scrollerContent.style.transition = 'transform 10s linear infinite';
-        scrollerContent.style.transform = `translateX(-${scrollerContent.offsetWidth}px)`;
-      }, 10);
-    });
-  }, 10);
+          scrollerContent.style.transition = "none";
+          scrollerContent.style.width = "auto";
+      }, 500);
+  }
+
+  // Attach event listeners to buttons
+  const leftButton = document.querySelector('button[data-action="moveLeft"]');
+  if (leftButton) {
+      leftButton.addEventListener('click', moveLeft);
+  } else {
+      console.error("Button with data-action 'moveLeft' not found.");
+  }
+
+  const rightButton = document.querySelector('button[data-action="moveRight"]');
+  if (rightButton) {
+      rightButton.addEventListener('click', moveRight);
+  } else {
+      console.error("Button with data-action 'moveRight' not found.");
+  }
+});
+
 
   
   document.addEventListener('DOMContentLoaded', function () {
