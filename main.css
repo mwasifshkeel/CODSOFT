@@ -122,6 +122,29 @@ h1{
     flex-direction: row;
     overflow: hidden;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.virusimage {
+    background-image: url(virus.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width to match the height */
+    border: 2px solid black;
+    border-radius: 50%;
+    filter: drop-shadow(10px 10px 10px #5e5e65);
+    /* margin-right: auto; */
+
+}
+.info{
+    width: 100vh;
+    margin-left: auto;
+    height: 300px;
+    background-color: white;
+    filter: drop-shadow(10px 10px 10px #5e5e65);
 }
 
 .star {
@@ -133,16 +156,6 @@ h1{
 
 .wsf_lf_s4 {
 
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(#e4e7f0, #ddddde);
-    text-align: center;
-    flex-direction: row;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.wsf_lf_s5 {
     display: flex;
     width: 100%;
     height: 100vh;

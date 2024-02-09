@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.wsf_lf_s3');
 
     // Number of stars you want
-    const numberOfStars = 20;
+    const numberOfStars = 10;
 
     // Create and scatter stars initially
     for (let i = 0; i < numberOfStars; i++) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createStar() {
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = `${Math.random() * 30 + 1}px`;
+        star.style.width = `${Math.random() * 20 + 1}px`;
         star.style.height = star.style.width;
 
         const initialX = Math.random() * window.innerWidth;
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.wsf_lf_s4');
 
     // Number of stars you want
-    const numberOfStars = 20;
+    const numberOfStars = 10;
 
     // Create and scatter stars initially
     for (let i = 0; i < numberOfStars; i++) {
@@ -119,63 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createStar() {
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = `${Math.random() * 30 + 1}px`;
-        star.style.height = star.style.width;
-
-        const initialX = Math.random() * window.innerWidth;
-        const initialY = Math.random() * window.innerHeight;
-
-        star.style.transform = `translate(${initialX}px, ${initialY}px)`;
-        starsContainer.appendChild(star);
-
-        moveStarRandomly(star);
-    }
-
-    function moveStarRandomly(star) {
-        function getRandomPosition() {
-            const maxX = window.innerWidth - parseFloat(star.style.width);
-            const maxY = window.innerHeight - parseFloat(star.style.height);
-            const newX = Math.random() * maxX;
-            const newY = Math.random() * maxY;
-            return { x: newX, y: newY };
-        }
-
-        function animate() {
-            const newPosition = getRandomPosition();
-            const currentX = parseFloat(star.style.transform.split('(')[1].split('px')[0]);
-            const currentY = parseFloat(star.style.transform.split(', ')[1].split('px')[0]);
-
-            const deltaX = newPosition.x - currentX;
-            const deltaY = newPosition.y - currentY;
-
-            const speed = 0.01; // Adjust the speed as needed
-
-            star.style.transition = `transform ${Math.random() * 3 + 1}s ease-in-out`;
-            star.style.transform = `translate(${newPosition.x}px, ${newPosition.y}px)`;
-
-            setTimeout(() => {
-                moveStarRandomly(star);
-            }, (Math.random() * 3 + 1) * 1000);
-        }
-
-        animate();
-    }
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const starsContainer = document.querySelector('.wsf_lf_s5');
-
-    // Number of stars you want
-    const numberOfStars = 20;
-
-    // Create and scatter stars initially
-    for (let i = 0; i < numberOfStars; i++) {
-        createStar();
-    }
-
-    function createStar() {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.width = `${Math.random() * 30 + 1}px`;
+        star.style.width = `${Math.random() * 20 + 1}px`;
         star.style.height = star.style.width;
 
         const initialX = Math.random() * window.innerWidth;
