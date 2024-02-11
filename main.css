@@ -24,7 +24,6 @@ html,body{
         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
     }
 }
-/* Apply keyframes animation to shape */
 .shape {
     background-color: #f0f;
     animation: shapeTransformation 4s infinite ease-in-out;
