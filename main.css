@@ -128,28 +128,56 @@ h1{
 }
 
 .virusimage {
-    background-image: url(virus.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px; /* Adjust the height as needed */
-    width: 300px; /* Adjust the width to match the height */
-    border: 2px solid black;
-    border-radius: 50%;
-    filter: drop-shadow(10px 10px 10px #5e5e65);
-    /* margin-right: auto; */
-
+    height: 256px; /* Adjust the height as needed */
+    width: 256px; /* Adjust the width to match the height */
+    margin-left: auto;
 }
 .info{
     width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     height: 300px;
     background-color: white;
     filter: drop-shadow(10px 10px 10px #5e5e65);
+    padding: 10px;
 }
 
+.info p{
+    font-size: 32px;
+    color: rgb(186, 95, 95);
+    text-shadow: 2px 2px #d89f9f;
+
+}
+
+.info button {
+    border: 1px solid rgb(134, 78, 59);
+    width: 100px;
+    height: 50px;
+    border-radius: 30%;
+    background-color: rgb(86, 27, 21);
+    color: white;
+    padding: 5px;
+    animation: glow 1s infinite alternate; /* Added animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px red;
+    }
+    100% {
+        box-shadow: 0 0 40px red;
+    }
+}
+
+.info button:hover{
+    background-color: hsl(0, 51%, 43%);
+}
 .star {
     position: absolute;
-    background-color: #355589;
+    background-color: #572217;
     border-radius: 50%;
     transition: transform 1s ease-in-out;
 }

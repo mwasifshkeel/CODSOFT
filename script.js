@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.wsf_lf_s3');
 
     // Number of stars you want
-    const numberOfStars = 10;
+    const numberOfStars = 6;
 
     // Create and scatter stars initially
     for (let i = 0; i < numberOfStars; i++) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createStar() {
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = `${Math.random() * 20 + 1}px`;
+        star.style.width = `${Math.random() * 15 + 1}px`;
         star.style.height = star.style.width;
 
         const initialX = Math.random() * window.innerWidth;
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.wsf_lf_s4');
 
     // Number of stars you want
-    const numberOfStars = 10;
+    const numberOfStars = 6;
 
     // Create and scatter stars initially
     for (let i = 0; i < numberOfStars; i++) {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createStar() {
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = `${Math.random() * 20 + 1}px`;
+        star.style.width = `${Math.random() * 15 + 1}px`;
         star.style.height = star.style.width;
 
         const initialX = Math.random() * window.innerWidth;
