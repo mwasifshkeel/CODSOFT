@@ -124,17 +124,14 @@ h1{
     display: flex;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
-.skillrow{
+#skillrow{
     display: flex;
     margin: auto;
     font-size: 20px;
     width: 100%;
-    justify-content: space-around;   
-}
-.skill{
-    margin: 1rem;
+    justify-content: space-between;   
 }
 @keyframes fillAnimation {
     to {
@@ -509,7 +506,7 @@ h1{
         padding: 0px;
     }
 }
-@media screen and (max-width: 720px) and (min-width: 300px){
+@media screen and (max-width: 720px) and (min-width: 450px){
     .wsf_pf_nav{
         display: none;
     }
@@ -545,7 +542,7 @@ h1{
         height:300px;
     }
 
-    .skillrow{
+    #skillrow{
         font-size: 10px;
     }
     .skillbar1 {
@@ -613,6 +610,138 @@ h1{
     .rightart{
         width:120px;
         height: 300px;
+        padding: 3px;
+        margin: auto;
+    }
+    .items{
+        color: rgb(61, 39, 142);
+        text-decoration: underline;
+        text-shadow: 1px -2px rgb(30, 14, 35);
+        display:flex;
+        font-size: 14px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .items img{
+        margin-right:auto;
+    }
+}
+@media screen and (max-width: 450px) and (min-width: 200px){
+    .wsf_pf_nav{
+        display: none;
+    }
+    .wsf_pf_logo{
+        font-size: 10px;
+        margin: auto;
+        text-align:center;
+    }
+    #wsf_pf_s1{
+        height:300px;
+        padding: 10px;
+    }
+    .selfpic{
+        margin: auto;
+        height:130px;
+        width:130px;
+    }
+    .rightcontainer{
+        width:100px;
+        text-align: right;
+        margin-top: auto;
+        margin-left:10px;
+        margin-bottom: auto;
+    }
+    #wsf_pf_s1 h1{
+        font-size: 30px;
+    }
+    .aboutsec{
+        font-size: 8px;
+        margin-top: 20px;
+    }
+    #wsf_pf_s2{
+        height:300px;
+    }
+    #wsf_pf_s2 h1{
+        font-size: 30px;
+    }
+
+    #skillrow{
+        font-size: 8px;
+    }
+    .skillbar1 {
+        width:60px;
+        height:10px;
+    }
+    .skillbar2 {
+        width:60px;
+        height:10px;
+    }
+    .skillbar3 {
+        width:60px;
+        height:10px;
+    }
+    #wsf_pf_s3{
+        height:350px;
+        padding:0px;
+        padding-top: 45px;
+    }
+    #wsf_pf_s3 h1{
+        font-size: 30px;
+    }
+    .container{
+        display: flex;
+        margin-top: 10px;
+    }
+    .projectbox{
+        height: 200px;
+        width: 86px;
+        margin-left: auto;
+    }
+    .projectheading{
+        font-size:6px;
+    }
+    .projectdetails{
+        color: rgb(97, 65, 97);
+        text-align: left;
+        font-size: 5px;
+    }
+    .projectdetails li{
+        margin-top: 2px;
+    }
+    .projectdetails ul{
+        margin-left: 20px;
+        padding: 0px;
+    }
+    #wsf_pf_s4 h1{
+        font-size: 30px;
+    }
+    .resumedownload{
+        width: 70px;
+    }
+    #wsf_pf_s5{
+        height: 400px;
+        padding: 0px;
+    }   
+    #wsf_pf_s5 h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+
+    }
+    .text{
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .text span{
+        text-align: left;
+        font-weight: bold;
+        color: rgb(106, 29, 86);
+        margin-top: 30px;
+        font-size: 7px;
+    }
+    .rightart{
+        width:100px;
+        height: 250px;
         padding: 3px;
         margin: auto;
     }
