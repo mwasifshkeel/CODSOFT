@@ -126,7 +126,7 @@ h1{
     border-bottom: 1px solid grey;
     overflow: hidden;
 }
-#skillrow{
+.skillrow{
     display: flex;
     margin: auto;
     font-size: 20px;
@@ -542,7 +542,7 @@ h1{
         height:300px;
     }
 
-    #skillrow{
+    .skillrow{
         font-size: 10px;
     }
     .skillbar1 {
@@ -665,7 +665,7 @@ h1{
         font-size: 30px;
     }
 
-    #skillrow{
+    .skillrow{
         font-size: 8px;
     }
     .skillbar1 {
