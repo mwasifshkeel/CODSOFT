@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page | Muhammad Wasif Shakeel</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="wsf_lf_h">
@@ -12,11 +13,20 @@
             <span>Exus Laptop Repairing</span>
         </div>
         <nav class="wsf_lf_nav">
+            <ul class="sidebar">
+            <a href="#" class = "icon d" onclick="hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
             <a href="#" class="nav_content">Home</a>
             <a href="#" class="nav_content">About Us</a>
             <a href="#" class="nav_content">Services</a>
             <a href="#" class="nav_content">Contact Us</a>
             <a href="#" class="nav_content">Book Now</a>
+            </ul>
+            <a href="#" class="nav_content hideOnMobile">Home</a>
+            <a href="#" class="nav_content hideOnMobile">About Us</a>
+            <a href="#" class="nav_content hideOnMobile">Services</a>
+            <a href="#" class="nav_content hideOnMobile">Contact Us</a>
+            <a href="#" class="nav_content hideOnMobile">Book Now</a>
+            <a href="#" class="icon" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
         </nav>
     </header>
     <main class="wsf_lf_m">
@@ -48,7 +58,6 @@
                     <div class="scroller-item">Laptop Hinge Repair/Replacement</div>
                     <div class="scroller-item">BIOS Update/Flash</div>
                     <div class="scroller-item">Laptop Insurance Assessment</div>
-
                 </div>
                 <div class="controls">
                     <button data-action="moveLeft">&lt;</button>
@@ -122,7 +131,7 @@
                 <button onclick="">Book Now</button>
             </div>
         </section>
-        <section class="wsf_lf_s4 shape">
+        <section class="wsf_lf_s4">
             <div class="box">
                 <div class="content">
                     <img src="laptop-repair-1.jpg" alt="Laptop Repair Image 1">

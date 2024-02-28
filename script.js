@@ -40,3 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error("Button with data-action 'moveRight' not found.");
   }
 });
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
