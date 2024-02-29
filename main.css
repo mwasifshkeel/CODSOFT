@@ -438,14 +438,18 @@ h1{
         width: 400px;
     }
 }
-@media screen and (max-width: 1000px) and (min-width: 720px){
+@media screen and (max-width: 1000px) and (min-width: 770px){
     .wsf_pf_nav{
         display: none;
     }
     .wsf_pf_logo{
+        width:100%;
         font-size: 16.7px;
         margin: auto;
         text-align:center;
+    }
+    .wsf_pf_logo h1{
+        width:100%;
     }
     #wsf_pf_s1{
         height:400px;
@@ -486,12 +490,13 @@ h1{
     }
     .container{
         display: flex;
+        margin: auto;
         margin-top: 40px;
     }
     .projectbox{
         height: 300px;
-        width: 200px;
-        margin: 5px;
+        width: 20vw;
+        margin: 10px;
     }
     .projectheading{
         font-size:12px;
@@ -506,14 +511,18 @@ h1{
         padding: 0px;
     }
 }
-@media screen and (max-width: 720px) and (min-width: 450px){
+@media screen and (max-width: 770px) and (min-width: 450px){
     .wsf_pf_nav{
         display: none;
     }
     .wsf_pf_logo{
+        width:100%;
         font-size: 13.3px;
         margin: auto;
         text-align:center;
+    }
+    .wsf_pf_logo h1{
+        width:100%;
     }
     #wsf_pf_s1{
         height:300px;
@@ -631,9 +640,13 @@ h1{
         display: none;
     }
     .wsf_pf_logo{
+        width:100%;
         font-size: 10px;
         margin: auto;
         text-align:center;
+    }
+    .wsf_pf_logo h1{
+        width:100%;
     }
     #wsf_pf_s1{
         height:300px;
