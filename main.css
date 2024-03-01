@@ -287,6 +287,9 @@ h1{
     box-shadow: -4px 4px 2px 0px rgb(212, 193, 193);
     cursor: pointer;
 }
+.projectbox:hover{
+    transform: translateY(-5%);
+}
 .projectheading{
     text-align: center;
     color: rgb(41, 18, 41);
